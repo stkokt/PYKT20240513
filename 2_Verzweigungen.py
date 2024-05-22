@@ -55,3 +55,15 @@ Im Lichtschalter- Bsp. ist das Licht aus, wenn die Variable auf False steht.
 if (lichtschalter) erfragt also, ob lichtschalter == True,
 if (not lichtschalter) erfragt hingegen, ob lichtschalter == False
 """ 
+
+# Die 'match case'- Variante (wird häufig für Menuführungen verwendet)
+
+
+x=input("Programmnummer eingeben: ")
+print("1 = Programm 1\t 2 = Programm 2\t 99 = exit")
+while (x != "99"):
+    match(x):
+        case "1": print("Programm 1 aufgerufen") 
+        case "2": print("Programm 2 aufgerufen")
+        case _: print("Falsche Programmnummer")
+
