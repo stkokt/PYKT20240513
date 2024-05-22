@@ -59,11 +59,15 @@ if (not lichtschalter) erfragt hingegen, ob lichtschalter == False
 # Die 'match case'- Variante (wird häufig für Menuführungen verwendet)
 
 
-x=input("Programmnummer eingeben: ")
-print("1 = Programm 1\t 2 = Programm 2\t 99 = exit")
+x=str()
+
 while (x != "99"):
+    print("1 = Programm 1\t 2 = Programm 2\t 99 = exit")
+    x=input("Programmnummer eingeben: ")
     match(x):
         case "1": print("Programm 1 aufgerufen") 
         case "2": print("Programm 2 aufgerufen")
+        case "99":  print("Programm wird beendet")
         case _: print("Falsche Programmnummer")
+        
 
