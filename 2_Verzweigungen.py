@@ -40,7 +40,7 @@ Da auch 0 als False und 1 als True ausgewertet werden, kann jede Variable (z.B. 
 
 var1 = 0   # Wenn var1 = irgendein Wert außer 0, dann if var1 == True 
 if var1:
-    print("False)
+    print("True")
 
 Bei sequenziellen (iterierbaren) Datentypen ist die Länge entscheidend.
 
