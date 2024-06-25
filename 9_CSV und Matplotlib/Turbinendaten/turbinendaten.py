@@ -12,22 +12,20 @@ with open('10m.csv','r') as csv_file:
         turbinedata.append(line)
 
 
-#print(turbinedata)
+print(turbinedata)
 
 winddata=[x[0] for x in turbinedata]
-#print(winddata)
+print()
+print(winddata)
 wdsplit=[str(x).split(";") for x in winddata]
-#print(wdsplit)
+print()
+print(wdsplit)
 avgWind=[float(x[0]) for x in wdsplit]
-#print(avgWind)
+print()
+print(avgWind)
 avgPower=[float(x[3])/200 for x in wdsplit]
-#print(avgWind, "\n", avgPower)
-
-""" with open('D:\\Projekte\\Softwareprojekte\\Python\\LG2\\10m.csv','r') as csv_file:
-    csv_reader =csv.DictReader(csv_file, delimiter=';')
-
-    for line in csv_reader:
-        print(line['Wind Speed (avg)']) """
+print()
+print(avgWind, "\n", avgPower)
 
 
 from matplotlib import pyplot as plt

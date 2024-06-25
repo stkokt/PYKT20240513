@@ -171,7 +171,7 @@ def pwgenSimple(pwLength):
     pwPool=hexdigits + punctuation
     return "".join(sample(pwPool, pwLength))
 
-def pwCreatorPro1(lows:int, caps:int, nums:int, specs:int=0)->str:
+def pwgenPro1(lows:int, caps:int, nums:int, specs:int=0)->str:
     from random import sample, shuffle
     from string import ascii_lowercase, ascii_uppercase, digits, punctuation
     lowLetters=sample(ascii_lowercase, lows)
@@ -183,7 +183,7 @@ def pwCreatorPro1(lows:int, caps:int, nums:int, specs:int=0)->str:
     shuffle(pw)
     return "".join(pw)
 
-def pwCreatorPro2(lows:int, caps:int, nums:int, specs:int=0)->str:
+def pwgenPro2(lows:int, caps:int, nums:int, specs:int=0)->str:
     from random import sample, shuffle
     #from string import ascii_lowercase, ascii_uppercase, digits, punctuation
     lowLetters=sample(range(97, 123), lows)
@@ -197,7 +197,7 @@ def pwCreatorPro2(lows:int, caps:int, nums:int, specs:int=0)->str:
     shuffle(pw)
     return "".join(pw)
 
-print(pwCreatorPro2(2,3,4,4))
+print(pwgenPro2(2,3,4,4))
 
 
 
