@@ -34,21 +34,21 @@ class Auto(Fahrzeug):                               # Vererbung: Auto erbt von F
         self._hp = hp
 
        
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other) -> bool:                # Operator- Überladung für '=='
 
-        if self._hp == other._hp:
+        if self._hp == other._hp:                   # Es werden die Pferdestärken verglichen
             return True
         else:
             return False
 
-    def __lt__(self, other):
+    def __lt__(self, other):                        # Operator- Überladung für '<=' (kleinergleich)
 
         if self._hp < other._hp:
             return True
         else:
             return False
     
-    def __gt__(self, other):
+    def __gt__(self, other):                        # Operator- Überladung für '>=' (größergleich)
 
         if self._hp > other._hp:
             return True
@@ -77,14 +77,14 @@ class Camper(pkw, Haus):                                        # Mehrfachvererb
 
 
 
-BMW = pkw("BMW", "Deutschland", 200, 4)
+BMW = pkw("BMW", "Deutschland", 200, 4)                         # Instanzierung eines PKW
 #BMW.fahren()
 
-SEAT = pkw("Seat", "Spanien", 50, 4)
+SEAT = pkw("Seat", "Spanien", 50, 4)                            # Instanzierung eines weiteren PKW
 
 h=Haus(2,3,5)
 
-marianne= Camper("ABC", "Holland", 200, 6, 8, 5, 3)
+marianne= Camper("ABC", "Holland", 200, 6, 8, 5, 3)             # Instanzierung eines Campers
 
 print(pkw.mro())                                                # Method- Resolution- Order
 print(Camper.mro())                                             # Gibt aus, in welcher Reihenfolge Python die aufgerufene Methode sucht
